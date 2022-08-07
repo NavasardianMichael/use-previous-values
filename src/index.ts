@@ -1,11 +1,6 @@
 import { useEffect, useMemo, useRef } from "react";
 
-type T_returnType<T> = {
-  0: T[],
-  1: () => void 
-}
-
-function usePreviousValues<T>(value: T, maxSteps: number = 30): T_returnType<T> {
+function usePreviousValues<T>(value: T, maxSteps: number = 30): [T[], () => void] {
   const isReseted = useRef<boolean>(false);
   const dataRef = useRef<T[]>([]);
   const _maxSteps = useMemo<number>(() => Math.min(maxSteps, 50), [maxSteps]);
