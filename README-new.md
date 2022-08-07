@@ -39,30 +39,20 @@ npm install use-previous-values
 Check out an example.
 
 ```sh
-import { genRecurDateBasedList } from 'recur-date-based';
+function App() {
+  const [state, setState] = useState<string>("");
+  const [data, reset] = usePreviousValues<string>(state, 10);
 
-genRecurDateBasedList({
-    start: '2022-07-01T19:00:00',
-    interval: 3,
-    intervalType: 'week',
-    end: '2022-07-30T19:00:00',
-    localeString: {
-        lang: 'fr-CH',
-        formatOptions: {
-            timeZone: 'America/New_York',
-            hourCycle: 'h24',
-            year: "numeric",
-            month: "2-digit",
-            day: "2-digit",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit"
-        }
-    },
-    extended: {
-        isMonday: ({date}) => date.getDay() === 1,
-        getDateOnly: ({dateStr}) => dateStr.substring(0, 8),
-    }
+  return (
+    <div className="App">
+      <h4>Textarea changes are maintained due to the hook</h4>
+      <textarea 
+        value={state} 
+        onChange={(e) => setState(e.target.value)} 
+      />
+      <p>{JSON.stringify(data)}</p>
+    </div>
+  )
 }
 ```
 
