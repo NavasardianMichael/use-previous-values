@@ -1,0 +1,48 @@
+{
+  "version": "0.1.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "nodemon playground",
+    "watch": "tsdx watch",
+    "build": "tsdx build"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "name": "use-previous-values",
+  "author": "NavasardianMichael",
+  "description": "Custom hook for maintaining previous values during rerenders.",
+  "keywords": [
+    "previous states",
+    "past props",
+    "state history",
+    "data snapshots",
+    "keep state",
+    "undo",
+    "redo"
+  ],
+  "module": "dist/use-previous-values.esm.js",
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.0.0",
+    "@types/react": "^18.0.16",
+    "@types/react-dom": "^18.0.6",
+    "husky": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^3.9.10"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
