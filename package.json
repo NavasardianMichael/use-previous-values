@@ -1,5 +1,5 @@
 {
-  "version": "0.1.4",
+  "version": "0.1.5",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -18,7 +18,7 @@
   },
   "name": "use-previous-values",
   "author": "NavasardianMichael",
-  "description": "Custom hook for maintaining previous values during rerenders.",
+  "description": "Custom hook for maintaining and versioning the previous values during rerenders.",
   "keywords": [
     "react",
     "custom hook",
