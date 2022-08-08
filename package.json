@@ -20,6 +20,8 @@
   "author": "NavasardianMichael",
   "description": "Custom hook for maintaining previous values during rerenders.",
   "keywords": [
+    "react",
+    "custom hook",
     "previous states",
     "past props",
     "state history",
