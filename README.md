@@ -34,7 +34,7 @@ npm install use-previous-values
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-The hook accepts two parameters. First is the value which changes are maintained, the second is the steps count which are memorized by the hook: its default is 30 and max value is 50.
+The hook accepts two parameters. First is the value which changes are maintained, the second is the steps count which are memorized by the hook: its default is 10 and max value is 50.
 
 The hook returns an array of two elements: first is an array consisting of previous values respectively by steps. The second is a function, which resets the array, i.e., assigns an empty array to the first element of the returned array.   
 

@@ -1,14 +1,14 @@
 import { useEffect, useMemo, useRef } from "react";
 
-function usePreviousValues<T>(value: T, maxSteps: number = 30): [T[], () => void] {
-  const isReseted = useRef<boolean>(false);
+function usePreviousValues<T>(value: T, cacheMaxSteps: number = 10): [T[], () => void] {
+  const isResetRef = useRef<boolean>(false);
   const dataRef = useRef<T[]>([]);
-  const _maxSteps = useMemo<number>(() => Math.min(maxSteps, 50), [maxSteps]);
+  const _maxSteps = useMemo<number>(() => Math.min(cacheMaxSteps, 50), [cacheMaxSteps]);
 
   useEffect(() => {
-    if (isReseted.current) {
+    if (isResetRef.current) {
       dataRef.current = [];
-      isReseted.current = false;
+      isResetRef.current = false;
       return;
     }
 
@@ -19,7 +19,7 @@ function usePreviousValues<T>(value: T, maxSteps: number = 30): [T[], () => void
     dataRef.current[dataRef.current.length] = value;
   }, [_maxSteps, value]);
 
-  const reset = () => isReseted.current = true
+  const reset = () => isResetRef.current = true
 
   return [dataRef.current, reset];
 }

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -17,22 +17,23 @@
     "react": ">=16"
   },
   "name": "use-previous-values",
-  "author": "NavasardianMichael",
+  "author": "Navasardian Michael",
   "description": "Custom hook for maintaining and versioning the previous values during rerenders.",
   "keywords": [
-    "react",
     "custom hook",
     "previous states",
-    "past props",
+    "react state tracking",
+    "props changes",
+    "data monitoring hook",
+    "preceding props",
     "state history",
     "data snapshots",
-    "keep state",
-    "undo",
-    "redo"
+    "undo state",
+    "redo state"
   ],
   "module": "dist/use-previous-values.esm.js",
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^8.0.0",
+    "@size-limit/preset-small-lib": "^9.0.0",
     "@types/react": "^18.0.16",
     "@types/react-dom": "^18.0.6",
     "husky": "^8.0.1",
